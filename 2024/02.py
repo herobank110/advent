@@ -14,9 +14,9 @@ print(
         (
             lambda d=list(map(int, b.split())): any(
                 (
-                    lambda j=d[:], f=__import__("itertools").pairwise: (j.pop(i) and 0)
-                    or len(set(e < f for e, f in f(j))) == 1
-                    and all(1 <= abs(e - f) <= 3 for e, f in f(j))
+                    lambda j=d[:], k=__import__("itertools").pairwise: (j.pop(i) and 0)
+                    or len(set(e < f for e, f in k(j))) == 1
+                    and all(1 <= abs(e - f) <= 3 for e, f in k(j))
                 )()
                 for i in range(len(d))
             )
